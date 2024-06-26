@@ -1,0 +1,24 @@
+.textShadow {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  color: #f00000;
+}
+.textShadow::after {
+  content: "";
+  width: 50px;
+  height: 35px;
+  background: linear-gradient(#019587, #fff);
+  position: absolute;
+  top: -20px;
+  left: 0;
+  z-index: -1;
+  transform: rotate(10deg);
+  border-top-left-radius: 35px;
+  border-bottom-right-radius: 35px;
+}
+
+.featuredImg {
+  background-image: url(./assets/home/featured.jpg);
+  background-attachment: fixed;
+}

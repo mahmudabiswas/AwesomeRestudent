@@ -15,7 +15,10 @@ const OurSho = () => {
         title={"OUR SHOP"}
         pra={`Would you link to try dish `}
       />
-      <ShopCategori />
+      <div className="max-w-screen-xl m-auto">
+        {" "}
+        <ShopCategori />
+      </div>
     </div>
   );
 };

@@ -9,10 +9,12 @@ const Main = () => {
   return (
     <div>
       <Banner />
-      <Categori />
-      <PopularMenu />
-      <Fetured />
-      <Testimonial />
+      <div className="max-w-screen-xl m-auto">
+        <Categori />
+        <PopularMenu />
+        <Fetured />
+        <Testimonial />
+      </div>
     </div>
   );
 };

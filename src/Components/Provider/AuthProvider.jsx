@@ -10,6 +10,7 @@ import {
   signInWithPopup,
 } from "firebase/auth";
 import app from "../Firebase/Firebase.config";
+import UseAxious from "../Hooks/useAxious";
 
 export const AuthContext = createContext(null);
 const auth = getAuth(app);
@@ -17,6 +18,7 @@ const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
   const googleProvider = new GoogleAuthProvider();
+  const axios = UseAxious();
 
   // SignIn
   const signIn = (email, password) => {
@@ -50,6 +52,16 @@ const AuthProvider = ({ children }) => {
   useEffect(() => {
     const unSubscribe = onAuthStateChanged(auth, (CreateUser) => {
       setUser(CreateUser);
+      if (CreateUser) {
+        const userInfo = { email: CreateUser.email };
+        axios.post("/jwt", userInfo).then((res) => {
+          if (res.data.token) {
+            localStorage.setItem("access-token", res.data.token);
+          }
+        });
+      } else {
+        localStorage.removeItem("access-token");
+      }
       setLoading(false);
     });
     return () => {

@@ -20,11 +20,13 @@ const Menu = () => {
         title={"OUR MENU"}
         pra={"Would you like to try a dish"}
       />
-      <MenuCategori />
-      <Dessert />
-      <Pizza />
-      <Salad />
-      <Sopups />
+      <div className="max-w-screen-xl m-auto">
+        <MenuCategori />
+        <Dessert />
+        <Pizza />
+        <Salad />
+        <Sopups />
+      </div>
     </div>
   );
 };

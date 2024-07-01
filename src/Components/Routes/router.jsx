@@ -14,6 +14,7 @@ import SignUp from "../Pages/SignUp";
 import Secret from "../Pages/Secret/Secret";
 import PrivateRoutes from "../Shared/PrivateRoutes";
 import AllUsers from "../Pages/DashBord/AllUsers";
+import AddItems from "../Pages/AddItems/AddItems";
 
 const router = createBrowserRouter([
   {
@@ -77,6 +78,10 @@ const router = createBrowserRouter([
       {
         path: "allUsers",
         element: <AllUsers />,
+      },
+      {
+        path: "addItems",
+        element: <AddItems />,
       },
     ],
   },

@@ -7,6 +7,7 @@ import {
   FaSearch,
   FaShoppingCart,
   FaUsers,
+  FaUtensils,
 } from "react-icons/fa";
 import { FaShop } from "react-icons/fa6";
 import { NavLink, Outlet } from "react-router-dom";
@@ -25,9 +26,9 @@ const DashBord = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/dashBord/reservation">
-              <FaCalendar />
-              ReserVation
+            <NavLink to="/dashBord/addItems">
+              <FaUtensils />
+              Add Items
             </NavLink>
           </li>
           <li>

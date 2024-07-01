@@ -4,9 +4,9 @@ import SectionTitle from "../../Shared/SectionTitle";
 const Fetured = () => {
   return (
     //   using app.css
-    <div className="featuredImg text-white my-20">
+    <div className=" text-white my-20 featuredImg">
       <SectionTitle subHeading={"check it out"} heading={"Featured Item"} />
-      <div className="md:flex justify-center items-center bg-opacity-60 py-20 my-10 pt-8 px-36">
+      <div className="md:flex justify-center items-center  py-20 my-10 pt-8 px-36">
         <div>
           {" "}
           <img src={img1} alt="" />
